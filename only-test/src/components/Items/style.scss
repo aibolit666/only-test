@@ -1,0 +1,40 @@
+.items {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  margin: 9% auto;
+  border: none;
+}
+
+.item {
+  position: absolute;
+  background-color: white;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #42567A;
+  border-radius: 50%;
+  display: flex;
+  font-size: 36px;
+  text-align: center;
+  justify-content: center;
+}
+
+.item1 {
+  left: 0;
+  top: 0;
+}
+
+.item2{
+  right: 0;
+  top: 0;
+}
+
+.item3 {
+  left: 0;
+  bottom: 0;
+}
+
+.item4 {
+  right: 0;
+  bottom: 0;
+}

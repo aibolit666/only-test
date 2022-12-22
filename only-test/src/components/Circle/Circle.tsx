@@ -1,8 +1,12 @@
 import React from 'react';
 import './style.scss';
 
-const Circle = () => {
-  return <div className="circle"></div>;
+type Props = {
+  children: React.ReactNode;
+};
+
+const Circle = (props: Props) => {
+  return <div className="circle">{props.children}</div>;
 };
 
 export default Circle;
