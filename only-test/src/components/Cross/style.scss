@@ -1,4 +1,4 @@
-.wrapper {
+.cross {
   position: absolute;
   margin: 0 auto;
   width: 1440px;
@@ -8,15 +8,16 @@
   opacity: 0.1;
 }
 
-.wrapper-line-horizontal {
+.cross-line-horizontal {
   position: absolute;
   width: 1440px;
   top: 480px;
   border: 1px solid #42567A;
 }
 
-.wrapper-line-vertical {
+.cross-line-vertical {
   position: absolute;
+  left: 720px;
   height: 1080px;
   border: 1px solid #42567A;
 }

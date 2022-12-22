@@ -1,12 +1,14 @@
-import Wrapper from 'components/Wrapper/Wrapper';
+import Circle from 'components/Circle/Circle';
+import Cross from 'components/Cross/Cross';
 import React from 'react';
 import './style.scss';
 
 const Main: React.FC = () => {
   return (
     <>
-      <div className="title">
-        <Wrapper />
+      <div className="main">
+        <Cross />
+        <Circle />
       </div>
     </>
   );
