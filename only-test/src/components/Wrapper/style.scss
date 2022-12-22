@@ -1,0 +1,22 @@
+.wrapper {
+  position: absolute;
+  margin: 0 auto;
+  width: 1440px;
+  height: 1080px;
+  left: 320px;
+  border: 1px solid #42567A;
+  opacity: 0.1;
+}
+
+.wrapper-line-horizontal {
+  position: absolute;
+  width: 1440px;
+  top: 480px;
+  border: 1px solid #42567A;
+}
+
+.wrapper-line-vertical {
+  position: absolute;
+  height: 1080px;
+  border: 1px solid #42567A;
+}

@@ -1,10 +1,13 @@
+import Wrapper from 'components/Wrapper/Wrapper';
 import React from 'react';
 import './style.scss';
 
-const Main = () => {
+const Main: React.FC = () => {
   return (
     <>
-      <div className="title">MAIN</div>
+      <div className="title">
+        <Wrapper />
+      </div>
     </>
   );
 };
