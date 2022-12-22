@@ -24,6 +24,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src", "@testing-library/jest-dom", "jest.setup.ts"  ],
+    "src", "@testing-library/jest-dom", "jest.setup.ts", "src/pages/Main/.tsx"  ],
   "types": ["node", "jest", "@testing-library/jest-dom"]
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './pages/Main/Main';
+import Main from './components/Wrapper/Wrapper';
 import { NotFound } from './pages/NotFound/NotFound';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
