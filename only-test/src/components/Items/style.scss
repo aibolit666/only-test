@@ -1,22 +1,39 @@
 .items {
-  position: relative;
-  width: 440px;
-  height: 440px;
-  margin: 9% auto;
+  position: absolute;
+  width: 432px;
+  height: 434px;
+  left: 824px;
+  top: 265px;
   border: none;
 }
 
 .item {
   position: absolute;
-  background-color: white;
+  background-color: black;
+  color: black;
   width: 56px;
   height: 56px;
   border: 1px solid #42567A;
   border-radius: 50%;
   display: flex;
-  font-size: 36px;
-  text-align: center;
+  font-size: 22px;
+  align-items: center;
   justify-content: center;
+  transform: scale(0.1);
+  transition: .2s;
+}
+
+.item:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #F4F5F9;
+  transform: scale(1.0) !important;
+}
+
+.active {
+  color: black;
+  background-color: #F4F5F9;
+  transform: scale(1.0);
 }
 
 .item1 {

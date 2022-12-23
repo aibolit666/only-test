@@ -31,23 +31,37 @@ const Items = () => {
     }
 
     const tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
-    tl.to('.items', { duration: 2, rotation: wayToRotateOperand + degreesToRotate }, 'spin');
-    tl.to('.item', { duration: 2, rotation: itemRotateOperand + degreesToRotate }, 'spin');
+    tl.to('.items', { duration: 1, rotation: wayToRotateOperand + degreesToRotate }, 'spin');
+    tl.to('.item', { duration: 0, rotation: itemRotateOperand + degreesToRotate }, 'spin');
+  };
+
+  const setClickedItem = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const target = e.target as HTMLElement;
+
+    gsap.to('.item', { duration: 0.2, scale: 0.1 });
+
+    document.querySelectorAll('.item').forEach((item) => item.classList.remove('active'));
+
+    target.classList.add('active');
+
+    gsap.to('.active', { duration: 1, scale: 1.0 });
+
+    rotateItem(e);
   };
 
   return (
     <>
       <div className="items">
-        <div onClick={(e) => rotateItem(e)} className="item item1" id="item1">
+        <div onClick={(e) => setClickedItem(e)} className="item item1" id="2">
           2
         </div>
-        <div onClick={(e) => rotateItem(e)} className="item item2" id="item2">
+        <div onClick={(e) => setClickedItem(e)} className="item item2 active" id="1">
           1
         </div>
-        <div onClick={(e) => rotateItem(e)} className="item item3" id="item3">
+        <div onClick={(e) => setClickedItem(e)} className="item item3" id="3">
           3
         </div>
-        <div onClick={(e) => rotateItem(e)} className="item item4" id="item4">
+        <div onClick={(e) => setClickedItem(e)} className="item item4" id="4">
           4
         </div>
       </div>

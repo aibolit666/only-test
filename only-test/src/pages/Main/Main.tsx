@@ -9,9 +9,8 @@ const Main: React.FC = () => {
     <>
       <div className="main">
         <Cross />
-        <Circle>
-          <Items />
-        </Circle>
+        <Circle></Circle>
+        <Items />
       </div>
     </>
   );

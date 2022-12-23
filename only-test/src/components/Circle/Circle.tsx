@@ -5,8 +5,8 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Circle = (props: Props) => {
-  return <div className="circle">{props.children}</div>;
+const Circle = () => {
+  return <div className="circle"></div>;
 };
 
 export default Circle;
