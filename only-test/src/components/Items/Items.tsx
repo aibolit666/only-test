@@ -3,24 +3,36 @@ import gsap from 'gsap';
 import './style.scss';
 
 const Items = () => {
-  let reps: number;
+  let degreesToRotate: number;
+  let wayToRotateOperand: string;
+  let itemRotateOperand: string;
+
   const rotateItem = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (e.clientX > 1200 && e.clientY > 600) {
       console.log('right bottom');
-      reps = 270;
+      degreesToRotate = 90;
+      wayToRotateOperand = '-=';
+      itemRotateOperand = '+=';
     } else if (e.clientX < 900 && e.clientY > 600) {
       console.log('left bottom');
-      reps = 180;
+      degreesToRotate = 180;
+      wayToRotateOperand = '+=';
+      itemRotateOperand = '-=';
     } else if (e.clientX < 900 && e.clientY < 400) {
       console.log('left top');
-      reps = 90;
+      degreesToRotate = 90;
+      wayToRotateOperand = '+=';
+      itemRotateOperand = '-=';
     } else if (e.clientX > 1200 && e.clientY < 400) {
       console.log('right top');
-      reps = 0;
+      degreesToRotate = 0;
+      wayToRotateOperand = '+=';
+      itemRotateOperand = '-=';
     }
+
     const tl = gsap.timeline({ repeat: 0, repeatDelay: 0 });
-    tl.to('.items', { duration: 2, rotation: '+=' + reps }, 'spin');
-    tl.to('.item', { duration: 2, rotation: '-=' + reps }, 'spin');
+    tl.to('.items', { duration: 2, rotation: wayToRotateOperand + degreesToRotate }, 'spin');
+    tl.to('.item', { duration: 2, rotation: itemRotateOperand + degreesToRotate }, 'spin');
   };
 
   return (
