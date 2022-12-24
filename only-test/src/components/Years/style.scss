@@ -1,0 +1,27 @@
+.years-wrapper {
+  position: absolute;
+  width: 970px;
+  height: 160px;
+  left: 537px;
+  top: 390px;
+  font-family: 'PT Sans Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 160px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.year-start {
+  display: flex;
+  color: #5D5FEF;
+}
+
+.year-end {
+  display: flex;
+  color: #EF5DA8;
+}
