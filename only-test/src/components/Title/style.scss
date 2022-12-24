@@ -1,0 +1,24 @@
+.title-wrapper {
+  position: absolute;
+  left: 320px;
+  top: 167px;
+  display: flex;
+  flex-direction: row;
+}
+
+.gradient {
+  margin-right: 74px;
+}
+
+.title {
+  display: flex;
+  text-align: start;
+  width: 353px;
+  height: 134px;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+  color: #42567A;
+}
