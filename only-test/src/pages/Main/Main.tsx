@@ -4,6 +4,7 @@ import Items from 'components/Items/Items';
 import Title from 'components/Title/Title';
 import Years from 'components/Years/Years';
 import React from 'react';
+import Slider1 from 'components/Slider1/Slider1';
 import './style.scss';
 
 const Main: React.FC = () => {
@@ -15,6 +16,7 @@ const Main: React.FC = () => {
         <Circle />
         <Items />
         <Years />
+        <Slider1 />
       </div>
     </>
   );
