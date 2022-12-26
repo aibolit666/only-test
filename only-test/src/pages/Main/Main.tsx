@@ -13,8 +13,8 @@ const Main: React.FC = () => {
         <Title />
         <Cross />
         <Circle />
-        <Items />
         <Years />
+        <Items />
       </div>
     </>
   );

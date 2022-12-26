@@ -1,21 +1,16 @@
 @font-face {
   font-family: "PT Sans";
-  src: url("./assets/fonts/PTSans-Regular.ttf") format('opentype');
+  src: url("./assets/fonts/PTSans/PTSans-Regular.ttf") format('opentype');
 }
 
 @font-face {
   font-family: "PT Sans Bold";
-  src: url("./assets/fonts/PTSans-Bold.ttf") format('opentype');
+  src: url("./assets/fonts/PTSans/PTSans-Bold.ttf") format('opentype');
 }
 
 @font-face {
-  font-family: "PT Sans Bold Italic";
-  src: url("./assets/fonts/PTSans-BoldItalic.ttf") format('opentype');
-}
-
-@font-face {
-  font-family: "PT Sans Italic";
-  src: url("./assets/fonts/PTSans-Italic.ttf") format('opentype'),
+  font-family: "Bebas Neue";
+  src: url("./assets/fonts/BebasNeue/BebasNeue-Regular.ttf") format('opentype'),
 }
 
 .App {
