@@ -10,14 +10,10 @@
   height: 100%;
 }
 
-// .swiper {
-//   overflow: visible !important;
-//   position: absolute;
-//   max-width: 100%;
-//   min-height: 100%;
-// }
-
-.swiper-slide {
+.mySwiper1 .swiper-slide,
+.mySwiper2 .swiper-slide,
+.mySwiper3 .swiper-slide,
+.mySwiper4 .swiper-slide {
   text-align: left;
   max-width: 30%;
   height: 135px;

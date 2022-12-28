@@ -8,22 +8,22 @@ const Items = () => {
   let itemRotateOperand: string;
 
   const rotateItem = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (e.clientX > 1200 && e.clientY > 600) {
+    if (e.pageX > 1200 && e.pageY > 600) {
       console.log('right bottom');
       degreesToRotate = 90;
       wayToRotateOperand = '-=';
       itemRotateOperand = '+=';
-    } else if (e.clientX < 900 && e.clientY > 600) {
+    } else if (e.pageX < 900 && e.pageY > 600) {
       console.log('left bottom');
       degreesToRotate = 180;
       wayToRotateOperand = '+=';
       itemRotateOperand = '-=';
-    } else if (e.clientX < 900 && e.clientY < 400) {
+    } else if (e.pageX < 900 && e.pageY < 400) {
       console.log('left top');
       degreesToRotate = 90;
       wayToRotateOperand = '+=';
       itemRotateOperand = '-=';
-    } else if (e.clientX > 1200 && e.clientY < 400) {
+    } else if (e.pageX > 1200 && e.pageY < 400) {
       console.log('right top');
       degreesToRotate = 0;
       wayToRotateOperand = '+=';

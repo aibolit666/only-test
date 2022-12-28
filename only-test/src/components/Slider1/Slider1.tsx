@@ -15,6 +15,7 @@ const Slider1 = () => {
     <>
       <div className="swiper-wrapp">
         <Swiper
+          slidesPerView={1}
           pagination={{
             type: 'fraction',
           }}
@@ -30,7 +31,6 @@ const Slider1 = () => {
               pagination={{
                 clickable: true,
               }}
-              modules={[Pagination]}
               className="mySwiper1"
             >
               <SwiperSlide>Slide 1</SwiperSlide>
@@ -47,7 +47,6 @@ const Slider1 = () => {
               pagination={{
                 clickable: true,
               }}
-              modules={[Pagination]}
               className="mySwiper2"
             >
               <SwiperSlide>Slide 1</SwiperSlide>
@@ -66,7 +65,6 @@ const Slider1 = () => {
               pagination={{
                 clickable: true,
               }}
-              modules={[Pagination]}
               className="mySwiper3"
             >
               <SwiperSlide>Slide 1</SwiperSlide>
@@ -83,7 +81,6 @@ const Slider1 = () => {
               pagination={{
                 clickable: true,
               }}
-              modules={[Pagination]}
               className="mySwiper4"
             >
               <SwiperSlide>Slide 1</SwiperSlide>
