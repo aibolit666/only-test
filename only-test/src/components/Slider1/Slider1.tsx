@@ -1,12 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-// import required modules
 import { Pagination, Navigation } from 'swiper';
 import './style.scss';
 
@@ -31,21 +29,37 @@ const Slider1 = () => {
               pagination={{
                 clickable: true,
               }}
+              navigation={true}
+              modules={[Navigation]}
               className="mySwiper1"
             >
               <SwiperSlide>
-                13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды
+                <div className="swiper-title">2015</div>
+                <div className="swiper-content">
+                  13 сентября — частное солнечное затмение, видимое в Южной Африке и части
+                  Антарктиды
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик, получившую
-                обозначение GN-z11
+                <div className="swiper-title">2016</div>
+                <div className="swiper-content">
+                  Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик,
+                  получившую обозначение GN-z11
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                Компания Tesla официально представила первый в мире электрический грузовик Tesla
-                Semi
+                <div className="swiper-title">2017</div>
+                <div className="swiper-content">
+                  Компания Tesla официально представила первый в мире электрический грузовик Tesla
+                  Semi
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды
+                <div className="swiper-title">2016</div>
+                <div className="swiper-content">
+                  13 сентября — частное солнечное затмение, видимое в Южной Африке и части
+                  Антарктиды
+                </div>
               </SwiperSlide>
             </Swiper>
           </SwiperSlide>
@@ -59,12 +73,34 @@ const Slider1 = () => {
               }}
               className="mySwiper2"
             >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2015</div>
+                <div className="swiper-content">
+                  13 сентября — частное солнечное затмение, видимое в Южной Африке и части
+                  Антарктиды
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2016</div>
+                <div className="swiper-content">
+                  Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик,
+                  получившую обозначение GN-z11
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2017</div>
+                <div className="swiper-content">
+                  Компания Tesla официально представила первый в мире электрический грузовик Tesla
+                  Semi
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2016</div>
+                <div className="swiper-content">
+                  13 сентября — частное солнечное затмение, видимое в Южной Африке и части
+                  Антарктиды
+                </div>
+              </SwiperSlide>
             </Swiper>
           </SwiperSlide>
           <SwiperSlide>
@@ -77,10 +113,34 @@ const Slider1 = () => {
               }}
               className="mySwiper3"
             >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2015</div>
+                <div className="swiper-content">
+                  13 сентября — частное солнечное затмение, видимое в Южной Африке и части
+                  Антарктиды
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2016</div>
+                <div className="swiper-content">
+                  Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик,
+                  получившую обозначение GN-z11
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2017</div>
+                <div className="swiper-content">
+                  Компания Tesla официально представила первый в мире электрический грузовик Tesla
+                  Semi
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2016</div>
+                <div className="swiper-content">
+                  13 сентября — частное солнечное затмение, видимое в Южной Африке и части
+                  Антарктиды
+                </div>
+              </SwiperSlide>
             </Swiper>
           </SwiperSlide>
           <SwiperSlide>
@@ -93,12 +153,34 @@ const Slider1 = () => {
               }}
               className="mySwiper4"
             >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2015</div>
+                <div className="swiper-content">
+                  13 сентября — частное солнечное затмение, видимое в Южной Африке и части
+                  Антарктиды
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2016</div>
+                <div className="swiper-content">
+                  Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик,
+                  получившую обозначение GN-z11
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2017</div>
+                <div className="swiper-content">
+                  Компания Tesla официально представила первый в мире электрический грузовик Tesla
+                  Semi
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="swiper-title">2016</div>
+                <div className="swiper-content">
+                  13 сентября — частное солнечное затмение, видимое в Южной Африке и части
+                  Антарктиды
+                </div>
+              </SwiperSlide>
             </Swiper>
           </SwiperSlide>
         </Swiper>

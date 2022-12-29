@@ -11,12 +11,12 @@ const Main: React.FC = () => {
   return (
     <>
       <div className="main">
+        <Slider1 />
         <Title />
         <Cross />
         <Circle />
         <Items />
         <Years />
-        <Slider1 />
       </div>
     </>
   );
