@@ -19,16 +19,32 @@
   height: 135px;
 }
 
-// .mySwiper .swiper-button-next {
-//   background-image: url(./next.svg);
-//   background-repeat: no-repeat;
-//   background-size: 100% auto;
-//   background-position: center;
-// }
+.mySwiper .swiper-button-next {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-// .mySwiper .swiper-button-next::after {
-//   display: none;
-// }
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  width: 56px;
+  height: 56px;
+  border: 1px solid #42567A;
+  border-radius: 50%;
+  background-image: url('./../../assets/img/arrow.png');
+  background-repeat: no-repeat;
+  background-size: 20% auto;
+  background-position: 53% center;
+}
+
+.mySwiper .swiper-button-prev {
+  transform: rotate(180deg);
+}
+
+.mySwiper .swiper-button-next::after,
+.mySwiper .swiper-button-prev::after {
+  display: none;
+}
 
 .swiper-slide img {
   display: block;

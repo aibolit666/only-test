@@ -33,10 +33,20 @@ const Slider1 = () => {
               }}
               className="mySwiper1"
             >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
+              <SwiperSlide>
+                13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды
+              </SwiperSlide>
+              <SwiperSlide>
+                Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик, получившую
+                обозначение GN-z11
+              </SwiperSlide>
+              <SwiperSlide>
+                Компания Tesla официально представила первый в мире электрический грузовик Tesla
+                Semi
+              </SwiperSlide>
+              <SwiperSlide>
+                13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды
+              </SwiperSlide>
             </Swiper>
           </SwiperSlide>
           <SwiperSlide>
