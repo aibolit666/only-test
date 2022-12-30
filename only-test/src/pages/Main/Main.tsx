@@ -1,6 +1,5 @@
 import Circle from 'components/Circle/Circle';
 import Cross from 'components/Cross/Cross';
-import Items from 'components/Items/Items';
 import Title from 'components/Title/Title';
 import Years from 'components/Years/Years';
 import React from 'react';
@@ -15,7 +14,6 @@ const Main: React.FC = () => {
         <Title />
         <Cross />
         <Circle />
-        <Items />
         <Years />
       </div>
     </>
