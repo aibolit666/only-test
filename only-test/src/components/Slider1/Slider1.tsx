@@ -17,22 +17,18 @@ const Slider1 = () => {
 
   const rotateItem = (e: MouseEvent) => {
     if (e.pageX > 1200 && e.pageY > 600) {
-      console.log('right bottom');
       degreesToRotate = 90;
       wayToRotateOperand = '-=';
       itemRotateOperand = '+=';
     } else if (e.pageX < 900 && e.pageY > 600) {
-      console.log('left bottom');
       degreesToRotate = 180;
       wayToRotateOperand = '+=';
       itemRotateOperand = '-=';
     } else if (e.pageX < 900 && e.pageY < 400) {
-      console.log('left top');
       degreesToRotate = 90;
       wayToRotateOperand = '+=';
       itemRotateOperand = '-=';
     } else if (e.pageX > 1200 && e.pageY < 400) {
-      console.log('right top');
       degreesToRotate = 0;
       wayToRotateOperand = '+=';
       itemRotateOperand = '-=';
@@ -59,7 +55,6 @@ const Slider1 = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      console.log(className);
       return (
         '<span id="span' + (index + 1) + '" class="' + className + '">' + (index + 1) + '</span>'
       );
@@ -73,16 +68,7 @@ const Slider1 = () => {
         rotateItem(e);
       };
     }
-
-    const next = document.querySelector('.swiper-button-next');
-    (next as HTMLButtonElement).onclick = function () {
-      console.log('e');
-    };
   }, []);
-
-  const rot = (e: number) => {
-    console.log(e);
-  };
 
   return (
     <>
@@ -93,7 +79,16 @@ const Slider1 = () => {
           navigation={true}
           modules={[Pagination, Navigation]}
           className="mySwiper"
-          onSlideChange={(e) => rot(e.realIndex)}
+          onSlideChange={(e) => {
+            const slides = e.slides;
+            const activeSlideIndex = e.activeIndex;
+            const startYear =
+              slides[activeSlideIndex].firstChild.firstChild.firstChild.firstChild.textContent;
+            const endYear =
+              slides[activeSlideIndex].firstChild.firstChild.lastChild.firstChild.textContent;
+            console.log(startYear);
+            console.log(endYear);
+          }}
         >
           <SwiperSlide>
             <Swiper
