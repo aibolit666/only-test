@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -11,28 +11,27 @@ import { Pagination, Navigation } from 'swiper';
 import './style.scss';
 
 const Slider1 = () => {
+  const [currentStartYear, setCurrentStartYear] = useState(0);
+  const [currentEndYear, setCurrentEndYear] = useState(0);
+
   let degreesToRotate: number;
   let wayToRotateOperand: string;
   let itemRotateOperand: string;
 
   const rotateItem = (e: MouseEvent) => {
     if (e.pageX > 1200 && e.pageY > 600) {
-      console.log('right bottom');
       degreesToRotate = 90;
       wayToRotateOperand = '-=';
       itemRotateOperand = '+=';
     } else if (e.pageX < 900 && e.pageY > 600) {
-      console.log('left bottom');
       degreesToRotate = 180;
       wayToRotateOperand = '+=';
       itemRotateOperand = '-=';
     } else if (e.pageX < 900 && e.pageY < 400) {
-      console.log('left top');
       degreesToRotate = 90;
       wayToRotateOperand = '+=';
       itemRotateOperand = '-=';
     } else if (e.pageX > 1200 && e.pageY < 400) {
-      console.log('right top');
       degreesToRotate = 0;
       wayToRotateOperand = '+=';
       itemRotateOperand = '-=';
@@ -59,7 +58,6 @@ const Slider1 = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      console.log(className);
       return (
         '<span id="span' + (index + 1) + '" class="' + className + '">' + (index + 1) + '</span>'
       );
@@ -73,19 +71,19 @@ const Slider1 = () => {
         rotateItem(e);
       };
     }
-
-    const next = document.querySelector('.swiper-button-next');
-    (next as HTMLButtonElement).onclick = function () {
-      console.log('e');
-    };
   }, []);
 
-  const rot = (e: number) => {
-    console.log(e);
+  const changeYears = (startYear: number, endYear: number) => {
+    setCurrentStartYear(startYear);
+    setCurrentEndYear(endYear);
   };
 
   return (
     <>
+      <div className="years-wrapper">
+        <div className="year-start">{currentStartYear}</div>
+        <div className="year-end">{currentEndYear}</div>
+      </div>
       <div className="swiper-wrapp">
         <Swiper
           slidesPerView={1}
@@ -93,7 +91,25 @@ const Slider1 = () => {
           navigation={true}
           modules={[Pagination, Navigation]}
           className="mySwiper"
-          onSlideChange={(e) => rot(e.realIndex)}
+          onSwiper={(e) => {
+            const slides = e.slides;
+            const activeSlideIndex = e.activeIndex;
+            const currentStartYear =
+              slides[activeSlideIndex].firstChild.firstChild.firstChild.firstChild.textContent;
+            const currentEndYear =
+              slides[activeSlideIndex].firstChild.firstChild.lastChild.firstChild.textContent;
+            setCurrentStartYear(Number(currentStartYear));
+            setCurrentEndYear(Number(currentEndYear));
+          }}
+          onSlideChange={(e) => {
+            const slides = e.slides;
+            const activeSlideIndex = e.activeIndex;
+            const startYear =
+              slides[activeSlideIndex].firstChild.firstChild.firstChild.firstChild.textContent;
+            const endYear =
+              slides[activeSlideIndex].firstChild.firstChild.lastChild.firstChild.textContent;
+            changeYears(Number(startYear), Number(endYear));
+          }}
         >
           <SwiperSlide>
             <Swiper
