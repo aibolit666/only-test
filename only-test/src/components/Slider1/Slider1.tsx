@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -11,6 +11,9 @@ import { Pagination, Navigation } from 'swiper';
 import './style.scss';
 
 const Slider1 = () => {
+  const [currentStartYear, setCurrentStartYear] = useState(0);
+  const [currentEndYear, setCurrentEndYear] = useState(0);
+
   let degreesToRotate: number;
   let wayToRotateOperand: string;
   let itemRotateOperand: string;
@@ -70,8 +73,17 @@ const Slider1 = () => {
     }
   }, []);
 
+  const changeYears = (startYear: number, endYear: number) => {
+    setCurrentStartYear(startYear);
+    setCurrentEndYear(endYear);
+  };
+
   return (
     <>
+      <div className="years-wrapper">
+        <div className="year-start">{currentStartYear}</div>
+        <div className="year-end">{currentEndYear}</div>
+      </div>
       <div className="swiper-wrapp">
         <Swiper
           slidesPerView={1}
@@ -79,6 +91,16 @@ const Slider1 = () => {
           navigation={true}
           modules={[Pagination, Navigation]}
           className="mySwiper"
+          onSwiper={(e) => {
+            const slides = e.slides;
+            const activeSlideIndex = e.activeIndex;
+            const currentStartYear =
+              slides[activeSlideIndex].firstChild.firstChild.firstChild.firstChild.textContent;
+            const currentEndYear =
+              slides[activeSlideIndex].firstChild.firstChild.lastChild.firstChild.textContent;
+            setCurrentStartYear(Number(currentStartYear));
+            setCurrentEndYear(Number(currentEndYear));
+          }}
           onSlideChange={(e) => {
             const slides = e.slides;
             const activeSlideIndex = e.activeIndex;
@@ -86,8 +108,7 @@ const Slider1 = () => {
               slides[activeSlideIndex].firstChild.firstChild.firstChild.firstChild.textContent;
             const endYear =
               slides[activeSlideIndex].firstChild.firstChild.lastChild.firstChild.textContent;
-            console.log(startYear);
-            console.log(endYear);
+            changeYears(Number(startYear), Number(endYear));
           }}
         >
           <SwiperSlide>
