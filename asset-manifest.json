@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/only-test/static/css/main.06626699.css",
-    "main.js": "/only-test/static/js/main.b52280be.js",
+    "main.css": "/only-test/static/css/main.ff60f74c.css",
+    "main.js": "/only-test/static/js/main.8e5210a2.js",
     "static/js/787.b14b5ea0.chunk.js": "/only-test/static/js/787.b14b5ea0.chunk.js",
     "static/media/PTSans-Bold.ttf": "/only-test/static/media/PTSans-Bold.610bc32a7e32c292ce59.ttf",
     "static/media/PTSans-Regular.ttf": "/only-test/static/media/PTSans-Regular.77e92507394e2309d837.ttf",
@@ -9,12 +9,12 @@
     "static/media/PTSans-BoldItalic.ttf": "/only-test/static/media/PTSans-BoldItalic.9432b29338612af7eca9.ttf",
     "static/media/error.png": "/only-test/static/media/error.ef7f91fcf69e57dcca32.png",
     "index.html": "/only-test/index.html",
-    "main.06626699.css.map": "/only-test/static/css/main.06626699.css.map",
-    "main.b52280be.js.map": "/only-test/static/js/main.b52280be.js.map",
+    "main.ff60f74c.css.map": "/only-test/static/css/main.ff60f74c.css.map",
+    "main.8e5210a2.js.map": "/only-test/static/js/main.8e5210a2.js.map",
     "787.b14b5ea0.chunk.js.map": "/only-test/static/js/787.b14b5ea0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06626699.css",
-    "static/js/main.b52280be.js"
+    "static/css/main.ff60f74c.css",
+    "static/js/main.8e5210a2.js"
   ]
 }
