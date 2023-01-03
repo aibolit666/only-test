@@ -13,6 +13,8 @@ import './style.scss';
 const Slider1 = () => {
   const [currentStartYear, setCurrentStartYear] = useState(0);
   const [currentEndYear, setCurrentEndYear] = useState(0);
+  const [currentPage, setCurrentPage] = useState('');
+  const [amountPages, setAmountPages] = useState('');
 
   let degreesToRotate: number;
   let wayToRotateOperand: string;
@@ -64,6 +66,11 @@ const Slider1 = () => {
     },
   };
 
+  const changeYears = (startYear: number, endYear: number) => {
+    setCurrentStartYear(startYear);
+    setCurrentEndYear(endYear);
+  };
+
   useEffect(() => {
     const elements = document.querySelectorAll('.swiper-pagination-bullet');
     for (let i = 0; i < elements.length; i++) {
@@ -73,11 +80,6 @@ const Slider1 = () => {
     }
   }, []);
 
-  const changeYears = (startYear: number, endYear: number) => {
-    setCurrentStartYear(startYear);
-    setCurrentEndYear(endYear);
-  };
-
   return (
     <>
       <div className="years-wrapper">
@@ -85,6 +87,9 @@ const Slider1 = () => {
         <div className="year-end">{currentEndYear}</div>
       </div>
       <div className="swiper-wrapp">
+        <div className="pagination-count">
+          0{currentPage}/0{amountPages}
+        </div>
         <Swiper
           slidesPerView={1}
           pagination={pagination}
@@ -94,10 +99,13 @@ const Slider1 = () => {
           onSwiper={(e) => {
             const slides = e.slides;
             const activeSlideIndex = e.activeIndex;
+            const amountSlides = e.slides.length;
             const currentStartYear =
               slides[activeSlideIndex].firstChild.firstChild.firstChild.firstChild.textContent;
             const currentEndYear =
               slides[activeSlideIndex].firstChild.firstChild.lastChild.firstChild.textContent;
+            setAmountPages(String(amountSlides));
+            setCurrentPage(String(activeSlideIndex + 1));
             setCurrentStartYear(Number(currentStartYear));
             setCurrentEndYear(Number(currentEndYear));
           }}
@@ -109,6 +117,7 @@ const Slider1 = () => {
             const endYear =
               slides[activeSlideIndex].firstChild.firstChild.lastChild.firstChild.textContent;
             changeYears(Number(startYear), Number(endYear));
+            setCurrentPage(String(activeSlideIndex + 1));
           }}
         >
           <SwiperSlide>

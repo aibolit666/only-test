@@ -38,6 +38,13 @@
   height: 100%;
 }
 
+.pagination-count {
+  position: absolute;
+  top: 695px;
+  left: 0px;
+  font-size: 14px;
+}
+
 // .mySwiper
 
 .mySwiper {
@@ -58,12 +65,6 @@
   left: 420px !important;
   width: 440px !important;
   height: 434px !important;
-}
-
-.mySwiper .swiper-pagination-horizontal {
-  top: 695px;
-  left: -585px;
-  font-size: 16px;
 }
 
 .mySwiper .swiper-pagination-bullet {
